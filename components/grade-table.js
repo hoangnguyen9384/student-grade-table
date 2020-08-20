@@ -4,6 +4,24 @@ class GradeTable {
 
   }
   updateGrades(grades){
-    console.log(grades);
+    console.log('grades: ', grades);
+
+    var tbody = this.tableElement.querySelector("tbody");
+    tbody.textContent = " ";
+    for (var i=0; i<grades.length; i++){
+      var tr = document.createElement("tr");
+
+      var studentName = document.createElement("td");
+      studentName.textContent = grades[i].name;
+
+      var studentCourse = document.createElement("td");
+      studentCourse.textContent = grades[i].course;
+
+      var studentGrade = document.createElement("td");
+      studentGrade.textContent = grades[i].grade;
+
+      tr.append(studentName, studentCourse, studentGrade);
+      tbody.append(tr);
+    }
   }
 }
