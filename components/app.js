@@ -3,7 +3,7 @@ class App {
     console.log(error);
   }
   handleGetGradesSuccess(grades){
-    console.log(grades);
+    this.gradeTable.updateGrades(grades);
   }
   constructor(){
     this.handleGetGradesError = this.handleGetGradesError.bind(this);
