@@ -4,7 +4,6 @@ class GradeTable {
 
   }
   updateGrades(grades){
-    console.log('grades: ', grades);
 
     var tbody = this.tableElement.querySelector("tbody");
     tbody.textContent = " ";
