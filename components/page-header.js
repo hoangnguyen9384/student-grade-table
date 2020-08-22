@@ -1,9 +1,10 @@
 class PageHeader {
   constructor(headerElelment){
-    this.headerElelment = headerElelment;
+    this.headerElement = headerElelment;
   }
   updateAverage(newAverage){
-    console.log(newAverage);
-
+    // console.log("newAverage: ", newAverage);
+    var badgeElement = this.headerElement.querySelector("span");
+    badgeElement.textContent = newAverage;
   }
 }
