@@ -12,34 +12,36 @@ class GradeTable {
       var updated = this.renderGradeRow(grades[i], this.deleteGrade);
       tbody.appendChild(updated);
     }
-    if (grades === null) {
-      var pElement = document.getElementsByClassName("d-none");
+    if (grades.length === 0) {
+      var pElement = document.getElementById("hidden-p");
       pElement.classList.remove("d-none");
     }
   }
 
   onDeleteClick(deleteGrade){
-    deleteGrade = this.deleteGrade;
+    this.deleteGrade = deleteGrade;
   }
 
-  renderGradeRow(grade, deleteGrade){
+  renderGradeRow(data, deleteGrade){
     var tr = document.createElement("tr");
     var td1 = document.createElement("td");
     var td2 = document.createElement("td");
     var td3 = document.createElement("td");
     var td4 = document.createElement("td");
     tr.append(td1, td2, td3, td4);
-    td1.textContent = grade.name;
-    td2.textContent = grade.course;
-    td3.textContent = grade.grade;
+    td1.textContent = data.name;
+    td2.textContent = data.course;
+    td3.textContent = data.grade;
 
     var button = document.createElement("button");
     button.type = "button";
     button.classList = "btn";
     td4.appendChild(button);
     button.textContent = "DELETE";
-    button.addEventListener("click", function(){deleteGrade(grade.id)});
+    button.addEventListener("click", function(){deleteGrade(data.id)});
+
     return tr;
   }
+
 
 }
