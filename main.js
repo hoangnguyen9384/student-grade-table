@@ -4,7 +4,9 @@ var newGradeForm = new GradeForm(formElement);
 var headerElement = document.querySelector("header");
 var newPageHeader = new PageHeader(headerElement);
 var tableElement = document.querySelector("table");
-var gradeTable = new GradeTable(tableElement);
+
+var p = document.getElementById("hidden-p");
+var gradeTable = new GradeTable(tableElement, p);
 
 var app = new App(gradeTable, newPageHeader, newGradeForm);
 app.start();
