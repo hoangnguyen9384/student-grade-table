@@ -14,8 +14,8 @@
   <header>
     <div class="container">
       <div class="row">
-        <h3 class="col-sm-8 mt-4 ">Student Grade Table</h3>
-        <h5 class="col-sm-4 mt-4">Average Grade <span class="badge badge-secondary"></span></h5>
+        <h3 class="col col-sm-8 mt-4 ">Student Grade Table</h3>
+        <h5 class="col col-sm-4 mt-4">Average Grade <span class="badge badge-secondary"></span></h5>
       </div>
     </div>
   </header>
@@ -23,7 +23,7 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-sm-8">
+      <div class=" col col-sm-8">
         <table class="table table-bordered table-striped mt-4">
           <thead class="thead-dark">
             <tr>
@@ -40,26 +40,29 @@
       </div>
 
       <div class="col-sm-4 mt-4">
+        <div>
+          <h3 class="addGrade">Add Grade</h3>
+        </div>
         <form>
             <div class="input-group">
               <div class="input-group-prepend">
                 <i class="fas fa-user-alt input-group-text"></i>
               </div>
-              <input type="text" class="form-control" name="name" placeholder="Name">
+              <input type="text" class="form-control col-auto" name="name" placeholder="Name">
             </div>
             <br>
             <div class="input-group">
               <div class="input-group-prepend">
                 <i class="far fa-list-alt input-group-text"></i>
               </div>
-              <input type="text" class="form-control" name="course" placeholder="Course">
+              <input type="text" class="form-control col-auto" name="course" placeholder="Course">
             </div>
             <br>
             <div class="input-group">
               <div class="input-group-prepend">
                 <i class="fas fa-graduation-cap input-group-text"></i>
               </div>
-              <input type="text" class="form-control" name="grade" placeholder="Grade">
+              <input type="text" class="form-control col-auto" name="grade" placeholder="Grade">
             </div>
             <br>
           <button class="btn btn-outline-success" type="button submit">Add</button>
